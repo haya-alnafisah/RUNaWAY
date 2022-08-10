@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t hayaalnafisa/runaway:1.0 .'
+				sh 'docker build -t hayaalnafisa/runaway:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push hayaalnafisa/runaway:1.0'
+				sh 'docker push hayaalnafisa/runaway:latest'
 			}
 		}
 
