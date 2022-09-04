@@ -3,13 +3,13 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('belt-token')
+		DOCKERHUB_CREDENTIALS=credentials('haya-token')
 		AWS_ACCESS_KEY_ID=credentials('haya-aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY =credentials('haya-aws-secret-access-key')
 	    ARTIFACT_NAME = 'Dockerrun.aws.json'
-        AWS_S3_BUCKET = 'haya-jenkins-s3'
-        AWS_EB_APP_NAME = 'devops-Jenkins'
-        AWS_EB_ENVIRONMENT_NAME = 'Devopsjenkins-env'
+        AWS_S3_BUCKET = 'haya-runaway-s3'
+        AWS_EB_APP_NAME = 'runaway'
+        AWS_EB_ENVIRONMENT_NAME = 'runaway-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
 
